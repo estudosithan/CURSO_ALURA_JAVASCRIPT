@@ -1,0 +1,11 @@
+{
+    "type": "node",
+    "request": "launch",
+    "name": "condicionais",
+    "skipFiles": [
+        "<node_internals>/**"
+    
+    ],
+    "program": "${workspaceFolder}\\condicionais.js"
+    
+    }
