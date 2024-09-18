@@ -29,15 +29,13 @@ console.log(cliente3);
 const contaCorrenteÍthan = new ContaCorrente();
 contaCorrenteÍthan.agencia = 1002;
 contaCorrenteÍthan.saldo = 2000;
-contaCorrenteÍthan.cliente = cliente2;
+contaCorrenteÍthan.cliente = cliente1;
 //contaCorrenteÍthan.sacar(200);
 console.log(contaCorrenteÍthan);
 
 contaCorrenteÍthan.depositar(400);
-const valorDeposito = contaCorrenteÍthan.depositar(400); //Aqui, ele considera que é necessário depositar mais 400 no saldo também
-console.log(valorDeposito);
-contaCorrenteÍthan.transferir(2800);
-console.log(contaCorrenteÍthan);
+console.log(contaCorrenteÍthan)
+
 
 //Para utilizar uma "classe dentro da outra", o nome técnico correto é instanciação
 console.log("\n\n");
@@ -46,15 +44,14 @@ console.log(contaCorrenteÍthan);
 const contaCorrenteManu = new ContaCorrente();
 contaCorrenteManu.agencia = 1003;
 contaCorrenteManu.saldo = 2000;
-contaCorrenteManu.cliente = cliente3;
-//Para utilizar uma "classe dentro da outra", o nome técnico correto é instanciação
+contaCorrenteManu.cliente = cliente3; //Para utilizar uma "classe dentro da outra", o nome técnico correto é instanciação
 
+//Para manipular uma "classe com a outra".
 console.log("\n\n");
 contaCorrenteÍthan.depositar(500);
-contaCorrenteÍthan.transferir(200, contaCorrenteManu);
+contaCorrenteÍthan.transferir(200, contaCorrenteManu); //Para manipular uma "classe com a outra".
 console.log(contaCorrenteÍthan);
-console.log(contaCorrenteManu)
-
+console.log(contaCorrenteManu);
 
 
 

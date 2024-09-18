@@ -20,9 +20,13 @@ export class ContaCorrente{
     }
 
     transferir(valor, conta){
-        if(this.saldo > 0 && this.saldo >= valor){
+        if(this.saldo >= valor){ // Checa se o saldo é suficiente para a transferência
             const valorSacado = this.sacar(valor);
-            conta.depositar(valorSacado);
+            if (valorSacado > 0) { // Garante que o valor sacado é válido
+                conta.depositar(valorSacado);
+            }
+        } else {
+            console.log("Saldo insuficiente para transferir.");
         }
     }
 }
