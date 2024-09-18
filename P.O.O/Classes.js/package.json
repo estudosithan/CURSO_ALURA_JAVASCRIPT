@@ -3,7 +3,7 @@
   "_comment": "Este é um arquivo de configuração, ele trabalha apartir do arquivo classe.js para fazer os export e import dos scripts",
   "name": "classes",
   "version": "1.0.0",
-  "description": "configuração de import e export dos scripts ",
+  "description": "configuração de import e export dos scripts. ",
   "main": "classe.js",
   "scripts": {
     
