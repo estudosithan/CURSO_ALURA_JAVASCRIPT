@@ -28,7 +28,6 @@ console.log("\n\n");
 const contaCorrenteÍthan = new ContaCorrente(1002 , 2000 ,  cliente1);//Para utilizar uma "classe dentro da outra", o nome técnico correto é instanciação
  //Não deixou atribuir por ter o getter, que não permite atribuição
 console.log(contaCorrenteÍthan);
-
 const contaCorrenteManu = new ContaCorrente(1003 , 2000 , cliente3);
 console.log(contaCorrenteManu);
 console.log("\n\n");
@@ -40,8 +39,8 @@ contaCorrenteÍthan.depositar(500);
 contaCorrenteÍthan.transferir(200, contaCorrenteManu); //Para manipular uma "classe com a outra".
 console.log(contaCorrenteÍthan);
 console.log(contaCorrenteManu);
-
-
+console.log("\n\n");
+console.log("A quantidade de contas cadastradas foi de:",ContaCorrente.numeroDeConta,"contas")
 
 
 

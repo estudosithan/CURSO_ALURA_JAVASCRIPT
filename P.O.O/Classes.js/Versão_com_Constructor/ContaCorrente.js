@@ -2,18 +2,19 @@ import {Cliente} from "./Cliente.js"
 export class ContaCorrente{
     
     //ESSA É´A VERSÃO COM CONSTRUCTOR, TUDO FEITO ANTES É MAIS DO QUE POSSÍVEL SEM ELE, MAS ELE FACILITA MTO AS COISAS
-
+    static numeroDeConta = 0;
     agencia; //Atributo agência
-    _saldo;  //Atributo saldo
-    _cliente; //Atributo Cliente
+    saldo = 0;  //Atributo saldo
+    cliente; //Atributo Cliente
     
 
-    constructor(agencia, _saldo , _cliente){
+    constructor(agencia, saldo , cliente){
         //O construtor menciona os próprios atributos
 
         this.agencia = agencia;
-        this._saldo = _saldo;
-        this._cliente = _cliente;
+        this.saldo = saldo;
+        this.cliente = cliente;
+        ContaCorrente.numeroDeConta++
     }
 
 
@@ -33,10 +34,10 @@ export class ContaCorrente{
         }
     } 
 
-    // get saldo(){
-    //    return this._saldo;
-    // }
-    //Código acima comentado para não atrapalhar a execução
+ get saldo(){
+       return this._saldo;
+     }
+   // Código acima comentado para não atrapalhar a execução
 
 
     depositar(valor){
