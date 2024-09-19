@@ -1,5 +1,5 @@
 export class Cliente{
 
-    nome; //Propriedade nome
-    cpf; //Propriedade cpf
+    nome; //Atributo nome
+    cpf; //Atributo cpf
 }

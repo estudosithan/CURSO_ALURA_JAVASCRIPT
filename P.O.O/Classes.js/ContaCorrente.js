@@ -1,8 +1,9 @@
+import {Cliente} from "./Cliente.js"
 export class ContaCorrente{
     
     agencia; //Atributo agência
-    saldo;  //Atributo saldo
-    cliente; //Atributo Cliente
+    _saldo;  //Atributo saldo
+    _cliente; //Atributo Cliente
     
 
     sacar(valor){ //Função ou método para realizar alguma operação na conta corrente, modificando a propriedade (saldo)
@@ -12,6 +13,20 @@ export class ContaCorrente{
         }
     }
     
+    set cliente(novoCliente){ //Para fazer atribuições em atributos privados dentro da classe e não fazer fora dela
+        //Vai mostrar indefinido se o atributo não for instanciado no meu código principal, por isso tem q importar
+        if(novoCliente instanceof Cliente){
+
+            this._cliente = novoCliente;
+        }
+    } 
+
+    // get saldo(){
+    //    return this._saldo;
+    // }
+    //Código acima comentado para não atrapalhar a execução
+
+
     depositar(valor){
         if(valor > 0){
             this.saldo += valor;
